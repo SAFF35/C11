@@ -15,36 +15,59 @@
             background-color: #f4f4f4;
             padding: 20px;
         }
-        .zigzag-container {
+        /* Jajaran Genjang untuk paragraf 1 dan 2 */
+        .paragraf-jajaran {
             display: block;
             background: linear-gradient(45deg, #1a237e, #0d47a1);
-            clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+            clip-path: polygon(10% 0, 90% 0, 100% 100%, 0 100%);
             padding: 20px;
             margin: 20px 0;
             color: white;
             text-align: center;
         }
-        .zigzag-container p {
+        .paragraf-jajaran p {
             margin: 15px 0;
             font-size: 1.2rem;
         }
+
+        /* Kertas Jaman Dulu untuk paragraf 3 dan 4 */
+        .paragraf-kertas {
+            display: block;
+            background: linear-gradient(135deg, #f2e5c9, #c9d1b8);
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+            padding: 20px;
+            margin: 20px 0;
+            color: black;
+            text-align: center;
+            box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .paragraf-kertas p {
+            margin: 15px 0;
+            font-size: 1.2rem;
+        }
+
     </style>
 </head>
 <body>
 
     <!-- Paragraf tentang Burung -->
-    <div class="zigzag-container">
+    <div class="paragraf-jajaran">
         <p>Burung adalah hewan yang dikenal dengan kemampuan terbangnya. Mereka memiliki sayap yang memungkinkan mereka untuk menjelajahi langit. Burung juga memiliki berbagai macam suara yang bisa digunakan untuk berkomunikasi atau menarik perhatian pasangannya.</p>
     </div>
 
     <!-- Paragraf tentang Ular -->
-    <div class="zigzag-container">
+    <div class="paragraf-jajaran">
         <p>Ular adalah reptil yang memiliki tubuh panjang dan ramping. Mereka tidak memiliki kaki, tetapi bergerak dengan cara melata. Ular seringkali ditemukan di hutan atau gurun, dan beberapa jenis ular berbahaya dengan bisa yang mematikan.</p>
     </div>
 
     <!-- Paragraf tentang Kodok -->
-    <div class="zigzag-container">
+    <div class="paragraf-kertas">
         <p>Kodok adalah amfibi yang biasanya hidup di dekat perairan. Mereka memiliki kulit yang lembab dan tubuh yang cenderung gemuk. Kodok dikenal dengan loncatannya yang tinggi dan suaranya yang khas saat musim kawin.</p>
+    </div>
+
+    <!-- Paragraf tentang Ayam -->
+    <div class="paragraf-kertas">
+        <p>Ayam adalah unggas yang sering dijadikan hewan peliharaan dan sumber pangan. Mereka memiliki bulu yang halus dan kokok yang khas. Ayam juga menghasilkan telur yang berguna sebagai makanan sehari-hari.</p>
     </div>
 
 </body>
