@@ -1,132 +1,202 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Affiliate</title>
+    <title>Smart Affiliate Future</title>
     <style>
-        body {
+        * {
             margin: 0;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
         }
-
-        /* Header judul mengikuti scroll */
-        header {
+        body {
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        .sticky-title {
             position: fixed;
             top: 0;
+            left: 0;
             width: 100%;
-            background: linear-gradient(to right, #6a11cb, #2575fc);
+            background: linear-gradient(to right, #004aad, #0073e6);
             color: white;
             text-align: center;
             padding: 10px 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
-        header h1 {
-            margin: 0;
-        }
-
-        /* Latar belakang gambar pertama */
-        .welcome-section {
-            background: url('https://affiliate035.wordpress.com/wp-content/uploads/2024/12/20241128_204611.png?w=768') no-repeat center center/cover;
-            padding: 60px 20px 20px;
+        .jumbotron {
             text-align: center;
+            padding: 70px 20px;
+            background: linear-gradient(to bottom, #004aad, #0073e6);
             color: white;
-            min-height: 300px;
-        }
-        .welcome-section h2 {
-            font-size: 2.5rem;
-            animation: pulse 1s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
-        }
-
-        /* Latar belakang gambar kedua */
-        .commission-section {
-            background: url('https://affiliate035.wordpress.com/wp-content/uploads/2024/12/20241120_173630.png?w=1024') no-repeat center center/cover;
-            padding: 40px 20px;
-            text-align: center;
-            color: white;
-            min-height: 300px;
-        }
-        .commission-container {
-            background: rgba(0, 0, 0, 0.6);
-            padding: 30px;
-            border-radius: 10px;
-            width: 80%;
-            margin: 0 auto;
-            color: white;
-            font-size: 1.2rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Legalitas dengan bentuk awan/gelombang */
-        .legal-section {
-            background: #4caf50;
-            color: white;
-            padding: 40px 20px;
             position: relative;
-            min-height: 200px;
         }
-        .legal-section::before, .legal-section::after {
-            content: "";
+        .jumbotron h1 {
+            font-size: 3rem;
+        }
+        .welcome {
+            font-size: 2rem;
+            color: white;
+            font-style: italic;
+            display: inline-block;
+            animation: fallingLetters 3s infinite linear;
+        }
+        @keyframes fallingLetters {
+            0% { opacity: 0; transform: translateY(-50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .section {
+            position: relative;
+            padding: 50px 20px;
+            color: white;
+            text-align: justify;
+        }
+        .section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section p {
+            margin-bottom: 15px;
+        }
+        .red-orange {
+            background: #ff5e5e;
+            background: linear-gradient(45deg, #ff5e5e, #ff7a3d);
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        }
+        .blue {
+            background: #00509e;
+            background: linear-gradient(45deg, #00509e, #0073e6);
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        }
+        .purple {
+            background: #6a1b9a;
+            background: linear-gradient(45deg, #6a1b9a, #8e44ad);
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        }
+        .green {
+            background: #2ecc71;
+            background: linear-gradient(45deg, #2ecc71, #27ae60);
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+        }
+        .wave {
             position: absolute;
-            width: 100%;
-            height: 50px;
-            background: white;
-            border-radius: 50%/100%;
+            bottom: -1px;
             left: 0;
-            z-index: 1;
+            width: 100%;
+            height: 80px;
         }
-        .legal-section::before {
-            top: -25px;
+        .wave path {
+            fill: white;
         }
-        .legal-section::after {
-            bottom: -25px;
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: linear-gradient(45deg, #ff5e5e, #ff7a3d);
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            animation: pulse 0.8s infinite;
         }
-        .legal-content {
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        .floating-button:hover {
+            background: linear-gradient(45deg, #ff7a3d, #ff5e5e);
+        }
+
+        /* Unik background dengan lipatan kertas atau efek klasik */
+        .letter-background {
+            background: linear-gradient(135deg, #f2e5c9, #c9d1b8);
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+            box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
             position: relative;
-            z-index: 2;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
-            text-align: center;
+            padding: 50px 20px;
         }
+        .letter-background:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150%;
+            height: 50%;
+            background: #c9d1b8;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            box-shadow: inset 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Smart Affiliate</h1>
-</header>
-
-<section class="welcome-section">
-    <h2>Welcome</h2>
-    <p>Smart Affiliate adalah platform modern yang menawarkan solusi bisnis berbasis afiliasi dengan sistem yang mudah dan inovatif. Kami hadir untuk membantu Anda mencapai kebebasan finansial.</p>
-</section>
-
-<section class="commission-section">
-    <h2>Komisi yang Anda Dapatkan</h2>
-    <div class="commission-container">
-        <p>Smart Affiliate menawarkan sistem komisi yang adil dan transparan, memberikan peluang penghasilan besar bagi semua mitra.</p>
-        <p>Anda bisa menikmati komisi dari setiap penjualan yang dilakukan melalui platform kami, dengan sistem yang mendukung pertumbuhan bisnis Anda.</p>
+    <!-- Sticky Title -->
+    <div class="sticky-title">
+        Peluang Emas
     </div>
-</section>
 
-<section class="legal-section">
-    <div class="legal-content">
-        <h2>Legalitas</h2>
-        <p>Smart Affiliate telah terdaftar dan mematuhi semua regulasi yang berlaku, memberikan rasa aman bagi para mitra bisnis untuk berkembang bersama kami.</p>
+    <!-- Jumbotron -->
+    <div class="jumbotron">
+        <span class="welcome">Welcome</span>
+        <h1>Smart Affiliate Future</h1>
     </div>
-</section>
+
+    <!-- Penjelasan SAF -->
+    <div class="section red-orange letter-background">
+        <h2>Apa itu SAF?</h2>
+        <p>Smart Affiliate Future (SAF) adalah platform inovatif yang dirancang untuk membantu individu mendapatkan penghasilan melalui program afiliasi yang cerdas.</p>
+        <p>SAF menawarkan peluang tanpa batas dengan sistem yang transparan, fleksibel, dan didukung oleh teknologi terbaru.</p>
+        <p>Bergabunglah dengan SAF untuk membangun masa depan finansial Anda melalui jaringan afiliasi yang solid dan terpercaya.</p>
+        <div class="wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path d="M0,64L48,74.7C96,85,192,107,288,122.7C384,139,480,149,576,154.7C672,160,768,160,864,154.7C960,149,1056,139,1152,122.7C1248,107,1344,85,1392,74.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </div>
+    </div>
+
+    <!-- Kontak -->
+    <div class="section blue letter-background">
+        <h2>Kontak Kami</h2>
+        <p>Untuk informasi lebih lanjut, jangan ragu untuk menghubungi tim kami yang ramah dan profesional.</p>
+        <p>Kami siap membantu Anda mencapai tujuan finansial melalui program afiliasi kami.</p>
+        <div class="wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path d="M0,64L48,74.7C96,85,192,107,288,122.7C384,139,480,149,576,154.7C672,160,768,160,864,154.7C960,149,1056,139,1152,122.7C1248,107,1344,85,1392,74.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </div>
+    </div>
+
+    <!-- Keuntungan -->
+    <div class="section purple letter-background">
+        <h2>Keuntungan Bergabung di SAF</h2>
+        <ul>
+            <li>Sistem yang transparan dan terpercaya</li>
+            <li>Potensi penghasilan tanpa batas</li>
+            <li>Program pelatihan gratis</li>
+            <li>Komunitas yang suportif</li>
+            <li>Penggunaan teknologi terbaru</li>
+            <li>Kemitraan dengan perusahaan ternama</li>
+            <li>Pembayaran tepat waktu</li>
+            <li>Dukungan pelanggan 24/7</li>
+            <li>Fleksibilitas kerja</li>
+            <li>Alat pemasaran modern</li>
+        </ul>
+        <div class="wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path d="M0,64L48,74.7C96,85,192,107,288,122.7C384,139,480,149,576,154.7C672,160,768,160,864,154.7C960,149,1056,139,1152,122.7C1248,107,1344,85,1392,74.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+        </div>
+    </div>
+
+    <!-- Tombol Gabung -->
+    <button class="floating-button">Gabung Sekarang</button>
 
 </body>
 </html>
