@@ -1,165 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deskripsi Hewan</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-        body {
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
-        
-        Tentu, berikut adalah contoh kode CSS yang dapat digunakan untuk membuat blok elemen berbentuk segi enam dengan radius sudut 20px:
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Garuda</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
 
-```
-.hexagon {
-  width: 200px;
-  height: 346px;
-  background-color: #F0E68C;
-  position: relative;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 20px;
-}
+    .hexagon-container {
+      width: 300px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: #ffcc00;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      border-radius: 20px;
+      padding: 0px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
 
-.hexagon:before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  border-bottom: 20px solid #F0E68C;
-}
+    .hexagon-container h1 {
+      font-size: 1.5em;
+      margin: 0 0 10px;
+      color: #8b0000;
+    }
 
-.hexagon:after {
-  content: "";
-  position: absolute;
-  bottom: -20px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  border-top: 20px solid #F0E68C;
-}
-```
-
-Dan berikut adalah contoh kode HTML yang dapat digunakan untuk membuat paragraf menjelaskan tentang burung:
-
-```
-<div class="hexagon">
-  <p>Burung adalah hewan yang memiliki sayap dan dapat terbang. Mereka memiliki bulu yang lembut dan ringan, serta paruh yang kuat untuk memakan makanan. Burung dapat ditemukan di berbagai habitat, dari hutan hingga gurun, dan memiliki berbagai jenis dan warna yang indah.</p>
-</div>
-```
-
-Dengan kode di atas, Anda dapat membuat blok elemen berbentuk segi enam dengan radius sudut 20px dan paragraf yang menjelaskan tentang burung.
-        .content h3 {
-            color: #FF4500;
-            text-align: center;
-        }
-        /* Bentuk Lo Jonh untuk paragraf 1 */
-        .paragraf-lojonh {
-            display: block;
-            background: linear-gradient(45deg, #1a237e, #0d47a1);
-            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-            padding: 20px;
-            margin: 20px 0;
-            color: white;
-            text-align: center;
-        }
-        .paragraf-lojonh p {
-            margin: 15px 0;
-            font-size: 1.2rem;
-        }
-
-        /* Bentuk Bintang untuk paragraf 2 */
-        .paragraf-bintang {
-            display: block;
-            background: linear-gradient(45deg, #ff9800, #f57c00);
-            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-            padding: 20px;
-            radius: 10px;
-            margin: 20px 0;
-            color: white;
-            text-align: center;
-        }
-        .paragraf-bintang p {
-            margin: 15px 0;
-            font-size: 1.2rem;
-        }
-
-        /* Bentuk Kubus untuk paragraf 3 */
-        .paragraf-kubus {
-            display: block;
-            background: linear-gradient(45deg, #00bcd4, #0097a7);
-            clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
-            padding: 1px;
-            radius: 10px;
-            margin: 20px 0;
-            color: white;
-            text-align: center;
-        }
-        .paragraf-kubus p {
-            margin: 15px 0;
-            font-size: 1.2rem;
-        }
-
-        /* Bentuk Segi Enam untuk paragraf 4 */
-        .paragraf-segi-enam {
-            display: block;
-            background: linear-gradient(45deg, #4caf50, #388e3c);
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            padding: 20px;
-            block-radius: 10px;
-            margin: 1px 0;
-            color: white;
-            text-align: center;
-        }
-        .paragraf-segi-enam p {
-            margin: 15px 0;
-            font-size: 1.2rem;
-        }
-
-    </style>
+    .hexagon-container p {
+      font-size: 1em;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
-
-    <div class="content">
-        <h3>Visi</h3>
-        <p>
-            Menjadi platform affiliate network marketing terpercaya dan inovatif yang memajukan kesejahteraan masyarakat melalui bisnis berbasis syariah.
-        </p>
+  <div class="hexagon-container">
+    <div>
+      <h1>Garuda</h1>
+      <p>
+        Garuda adalah burung mitologis dalam tradisi Hindu, Buddha, dan Indonesia. Dalam budaya Indonesia, Garuda menjadi lambang negara, melambangkan kekuatan, kebijaksanaan, dan kebebasan.
+      </p>
     </div>
-
-    <!-- Paragraf tentang Burung (Bentuk Lo Jonh) -->
-    <div class="paragraf-lojonh">
-        <p>Burung adalah hewan yang dikenal dengan kemampuan terbangnya. Mereka memiliki sayap yang memungkinkan mereka untuk menjelajahi langit. Burung juga memiliki berbagai macam suara yang bisa digunakan untuk berkomunikasi atau menarik perhatian pasangannya.</p>
-    </div>
-
-    <!-- Paragraf tentang Ular (Bentuk Bintang) -->
-    <div class="paragraf-bintang">
-        <p>Ular adalah reptil yang memiliki tubuh panjang dan ramping. Mereka tidak memiliki kaki, tetapi bergerak dengan cara melata. Ular seringkali ditemukan di hutan atau gurun, dan beberapa jenis ular berbahaya dengan bisa yang mematikan.</p>
-    </div>
-
-    <!-- Paragraf tentang Kodok (Bentuk Kubus) -->
-    <div class="paragraf-kubus">
-        <p>Kodok adalah amfibi yang biasanya hidup di dekat perairan. Mereka memiliki kulit yang lembab dan tubuh yang cenderung gemuk. Kodok dikenal dengan loncatannya yang tinggi dan suaranya yang khas saat musim kawin.</p>
-    </div>
-
-    <!-- Paragraf tentang Ayam (Bentuk Segi Enam) -->
-    <div class="paragraf-segi-enam">
-        <p>Ayam adalah unggas yang sering dijadikan hewan peliharaan dan sumber pangan. Mereka memiliki bulu yang halus dan kokok yang khas. Ayam juga menghasilkan telur yang berguna sebagai makanan sehari-hari.</p>
-    </div>
-
+  </div>
 </body>
 </html>
