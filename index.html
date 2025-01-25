@@ -15,6 +15,58 @@
             background-color: #f4f4f4;
             padding: 20px;
         }
+        
+        Tentu, berikut adalah contoh kode CSS yang dapat digunakan untuk membuat blok elemen berbentuk segi enam dengan radius sudut 20px:
+
+```
+.hexagon {
+  width: 200px;
+  height: 346px;
+  background-color: #F0E68C;
+  position: relative;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.hexagon:before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 20px solid #F0E68C;
+}
+
+.hexagon:after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-top: 20px solid #F0E68C;
+}
+```
+
+Dan berikut adalah contoh kode HTML yang dapat digunakan untuk membuat paragraf menjelaskan tentang burung:
+
+```
+<div class="hexagon">
+  <p>Burung adalah hewan yang memiliki sayap dan dapat terbang. Mereka memiliki bulu yang lembut dan ringan, serta paruh yang kuat untuk memakan makanan. Burung dapat ditemukan di berbagai habitat, dari hutan hingga gurun, dan memiliki berbagai jenis dan warna yang indah.</p>
+</div>
+```
+
+Dengan kode di atas, Anda dapat membuat blok elemen berbentuk segi enam dengan radius sudut 20px dan paragraf yang menjelaskan tentang burung.
+        .content h3 {
+            color: #FF4500;
+            text-align: center;
+        }
         /* Bentuk Lo Jonh untuk paragraf 1 */
         .paragraf-lojonh {
             display: block;
@@ -81,6 +133,13 @@
     </style>
 </head>
 <body>
+
+    <div class="content">
+        <h3>Visi</h3>
+        <p>
+            Menjadi platform affiliate network marketing terpercaya dan inovatif yang memajukan kesejahteraan masyarakat melalui bisnis berbasis syariah.
+        </p>
+    </div>
 
     <!-- Paragraf tentang Burung (Bentuk Lo Jonh) -->
     <div class="paragraf-lojonh">
